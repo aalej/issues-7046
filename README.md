@@ -1,6 +1,14 @@
 # Repro for issue 7064
 
+## Versions
+
+firebase-tools: v13.7.4<br>
+node: v20.10.0<br>
+platform: macOS Sonoma 14.4.1
+
 ## Steps to reproduce
+
+Note: Change `PROJECT_ID` to your Firebase project id and `SSR_FUNCTION` to the name of the SSR function generated after deployment.
 
 1. Run `firebase deploy --project PROJECT_ID`
 1. Run `curl 'https://us-central1-PROJECT_ID.cloudfunctions.net/SSR_FUNCTION/api/login' -F email="my@domain.com" -F password="pass123" -v`
